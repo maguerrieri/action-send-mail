@@ -16,6 +16,7 @@ function getBody(bodyOrFile, convertMarkdown) {
     // Convert Markdown to HTML
     if (convertMarkdown) {
         const converter = new showdown.Converter()
+        converter.setFlavor('github');
         body = converter.makeHtml(body)
     }
 
